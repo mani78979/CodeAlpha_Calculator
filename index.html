@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator | CodeAlpha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator">
+    <h1>CodeAlpha Calculator</h1>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    <input type="text" id="display" placeholder="0" disabled />
+    <div class="preview" id="preview">= 0</div>
+    <div id="error-message" aria-live="polite" style="display:none;"></div>
+
+    <div class="buttons">
+      <button class="btn function" onclick="clearDisplay()">C</button>
+      <button class="btn function" onclick="deleteLast()">⌫</button>
+      <button class="btn operator" onclick="append('/')">÷</button>
+      <button class="btn operator" onclick="append('*')">×</button>
+
+      <button class="btn" onclick="append('7')">7</button>
+      <button class="btn" onclick="append('8')">8</button>
+      <button class="btn" onclick="append('9')">9</button>
+      <button class="btn operator" onclick="append('-')">−</button>
+
+      <button class="btn" onclick="append('4')">4</button>
+      <button class="btn" onclick="append('5')">5</button>
+      <button class="btn" onclick="append('6')">6</button>
+      <button class="btn operator" onclick="append('+')">+</button>
+
+      <button class="btn" onclick="append('1')">1</button>
+      <button class="btn" onclick="append('2')">2</button>
+      <button class="btn" onclick="append('3')">3</button>
+      <button class="btn equal" onclick="calculate()">=</button>
+
+      <button class="btn zero" onclick="append('0')">0</button>
+      <button class="btn" onclick="append('.')">.</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
